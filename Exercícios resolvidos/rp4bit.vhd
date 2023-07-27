@@ -45,16 +45,16 @@ BEGIN
 	ELSE
 		load_temp <= '0';
 		
-		IF c1 = '1' AND c0 = '0' THEN
+		IF c1 = '0' AND c0 = '1' THEN
 			d_temp(3) := d_temp(2);
 			d_temp(2) := d_temp(1);
 			d_temp(1) := d_temp(0);
-			d_temp(0) := d_temp(3);
-		ELSIF c1 = '0' AND c0 = '1' THEN
+			d_temp(0) := '0';
+		ELSIF c1 = '1' AND c0 = '0' THEN
 			d_temp(0) := d_temp(1);
 			d_temp(1) := d_temp(2);
 			d_temp(2) := d_temp(3);
-			d_temp(3) := d_temp(0);
+			d_temp(3) := '0';
 		END IF;
 	END IF;
 	d <= d_temp;
