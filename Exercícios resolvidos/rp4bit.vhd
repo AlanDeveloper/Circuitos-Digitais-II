@@ -5,7 +5,7 @@ ENTITY rp4bit IS
 
 PORT(
 	A, B: IN std_logic_vector(3 downto 0);
-	load, clear, clock, sel_ab, c1, c0: IN std_logic;
+	clear, clock, sel_ab, c1, c0: IN std_logic;
 	q: OUT std_logic_vector(3 downto 0)
 );
 
@@ -24,6 +24,7 @@ PORT(
 END COMPONENT;
 
 SIGNAL d_temp: std_logic_vector(3 downto 0);
+SIGNAL load_temp: std_logic;
 
 BEGIN
 
@@ -35,11 +36,17 @@ BEGIN
 	ELSE
 		d_temp <= B;
 	END IF;
+
+	IF c1 = '1' AND c0 = '1' THEN
+		load_temp <= '1';
+	ELSE
+		load_temp <= '0';
+	END IF;
 END PROCESS;
 
 R0: r4bit PORT MAP (
 	d => d_temp,
-	load => load,
+	load => load_temp,
 	clock => clock,
 	clear =>  clear,
 	q => q
