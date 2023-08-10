@@ -70,31 +70,31 @@ BEGIN
 	END IF;
 	
 	CASE ten IS
-		WHEN 0 => visor_ten <= "1111110"; -- 0
-		WHEN 1 => visor_ten <= "0110000"; -- 1
-		WHEN 2 => visor_ten <= "1101101"; -- 2
-		WHEN 3 => visor_ten <= "1111001"; -- 3
-		WHEN 4 => visor_ten <= "0110011"; -- 4
-		WHEN 5 => visor_ten <= "1011011"; -- 5
-		WHEN 6 => visor_ten <= "1011111"; -- 6
-		WHEN 7 => visor_ten <= "1110000"; -- 7
-		WHEN 8 => visor_ten <= "1111111"; -- 8
-		WHEN 9 => visor_ten <= "1111011"; -- 9
-		WHEN OTHERS => visor_ten <= "0000000";
+		WHEN 0 => visor_ten <= "0000001"; -- 0
+		WHEN 1 => visor_ten <= "1001111"; -- 1
+		WHEN 2 => visor_ten <= "0010010"; -- 2
+		WHEN 3 => visor_ten <= "0000110"; -- 3
+		WHEN 4 => visor_ten <= "1001100"; -- 4
+		WHEN 5 => visor_ten <= "0100100"; -- 5
+		WHEN 6 => visor_ten <= "0100000"; -- 6
+		WHEN 7 => visor_ten <= "0001111"; -- 7
+		WHEN 8 => visor_ten <= "0000000"; -- 8
+		WHEN 9 => visor_ten <= "0000100"; -- 9
+		WHEN OTHERS => visor_ten <= "0000001";
 	END CASE;
 	
 	CASE unity IS
-		WHEN 0 => visor_unity <= "1111110"; -- 0
-		WHEN 1 => visor_unity <= "0110000"; -- 1
-		WHEN 2 => visor_unity <= "1101101"; -- 2
-		WHEN 3 => visor_unity <= "1111001"; -- 3
-		WHEN 4 => visor_unity <= "0110011"; -- 4
-		WHEN 5 => visor_unity <= "1011011"; -- 5
-		WHEN 6 => visor_unity <= "1011111"; -- 6
-		WHEN 7 => visor_unity <= "1110000"; -- 7
-		WHEN 8 => visor_unity <= "1111111"; -- 8
-		WHEN 9 => visor_unity <= "1111011"; -- 9
-		WHEN OTHERS => visor_unity <= "0000000";
+		WHEN 0 => visor_unity <= "0000001"; -- 0
+		WHEN 1 => visor_unity <= "1001111"; -- 1
+		WHEN 2 => visor_unity <= "0010010"; -- 2
+		WHEN 3 => visor_unity <= "0000110"; -- 3
+		WHEN 4 => visor_unity <= "1001100"; -- 4
+		WHEN 5 => visor_unity <= "0100100"; -- 5
+		WHEN 6 => visor_unity <= "0100000"; -- 6
+		WHEN 7 => visor_unity <= "0001111"; -- 7
+		WHEN 8 => visor_unity <= "0000000"; -- 8
+		WHEN 9 => visor_unity <= "0000100"; -- 9
+		WHEN OTHERS => visor_unity <= "0000001";
 	END CASE;
 END PROCESS;
 
